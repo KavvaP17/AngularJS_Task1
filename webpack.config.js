@@ -1,5 +1,4 @@
 var webpack = require('webpack');
-var autoprefixer = require('autoprefixer');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -63,9 +62,6 @@ module.exports = function makeWebpackConfig() {
 
   if (isProd) {
     config.plugins.push(
-      new webpack.NoErrorsPlugin(),
-      new webpack.optimize.DedupePlugin(),
-      //new webpack.optimize.UglifyJsPlugin(),
       new CopyWebpackPlugin([{
         from: __dirname + '/src/public'
       }])
