@@ -1,5 +1,5 @@
-angular.module('rootModule', []).
-    controller('contactListCrtr', function($scope){
+angular.module('rootModule')
+    .controller('contactListCtrl', function($scope){
         $scope.itemList = [
             {name: 'Alex', phone: '+375291111111', show: true},
             {name: 'Bob', phone: '+375292222222', show: true},
@@ -11,4 +11,4 @@ angular.module('rootModule', []).
             {name: 'Boris', phone: '+375298888888', show: true},
             {name: 'Archi', phone: '+375299999999', show: true}
         ]
-    })
+});

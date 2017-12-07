@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="rootModule" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+</head>
+<body>
+    <h1>Task #1</h1>
+    <div ng-controller="contactListCtrl">
+  		<table class="table">
+  			<tr>
+  				<th>Name</th>
+  				<th>Phone</th>
+  				<th>ShowPhones</th>
+  			</tr>
+  			<tr ng-repeat="item in itemList">
+  				<td><span ng-class="item.name | textColor">{{item.name}}</span></td>
+  				<td><span ng-show="item.show">{{item.phone}}</span></td>
+  				<td><input type="checkbox" ng-model="item.show" /></td>
+  			</tr>
+  		</table>
+  	</div>
+    <script src='./js/angular.min.js'></script>
+</body>
+</html>
